@@ -7,8 +7,8 @@ var app = express();
 app.use(session({
   secret: 'My super session secret',
   cookie: {
-//    httpOnly: true,
-    secure: true
+    httpOnly: true,
+//    secure: true
   }
 }));
 

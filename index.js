@@ -3,6 +3,7 @@ var session = require('express-session');
 var csrf = require('csurf');
 
 var app = express();
+app.disable('X-Powered-By');
 
 var server = app.listen(3000, function () {
   var host = server.address().address;

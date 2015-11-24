@@ -8,6 +8,7 @@ var server = app.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;
 
+// express-x-powered-by
   console.log('Example app listening at http://%s:%s', host, port);
 });
 
@@ -15,11 +16,14 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+
+// enable secure session
+// enable httponly session
 app.use(session({
   secret: 'My super session secret',
   cookie: {
 //    httpOnly: true,
-    secure: true
+//    secure: true
   }
 }));
 
@@ -29,7 +33,6 @@ app.use(function(req, res, next) {
   res.locals._csrf = req.csrfToken();
   next();
 });
-
 
 //function customHeaders( req, res, next ){
 //  // Switch off the default 'X-Powered-By: Express' header

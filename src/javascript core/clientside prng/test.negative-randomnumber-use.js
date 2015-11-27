@@ -3,8 +3,8 @@ module.exports = function(app, session) {
   app.use(session({
       secret: 'session secret',
       cookie: {
-        httpOnly: true,
-        secure: true
+//        httpOnly: true,
+//        secure: true
       }
     }));
   

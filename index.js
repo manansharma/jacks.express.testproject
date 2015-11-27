@@ -3,6 +3,7 @@ var session = require('express-session');
 var csrf = require('csurf');
 
 var app = express();
+app.disable('X-Powered-By'); // comment this line to trigger X-Powered-By issue
 
 // ************** for random number test ********
 require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);

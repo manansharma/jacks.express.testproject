@@ -6,7 +6,9 @@ var app = express();
 
 
 // ************** for express x-powered-by test ********
-require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
+app.disable( 'x-powered-by' );
+//require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
+
 
 // ************** for random number test ********
 require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);

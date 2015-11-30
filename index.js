@@ -3,10 +3,14 @@ var session = require('express-session');
 var csrf = require('csurf');
 
 var app = express();
-app.disable('X-Powered-By'); // comment this line to trigger X-Powered-By issue
+
+
+// ************** for express x-powered-by test ********
+require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for random number test ********
 require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
+
 
 var server = app.listen(3000, function () {
   var host = server.address().address;

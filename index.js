@@ -13,6 +13,9 @@ app.disable( 'X-Powered-By' );
 // ************** for random number test ********
 require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 
+// ************** for enable http only session test ********
+require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
+
 
 var server = app.listen(3000, function () {
   var host = server.address().address;

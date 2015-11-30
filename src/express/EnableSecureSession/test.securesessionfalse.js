@@ -6,7 +6,7 @@ module.exports = function(app, session) {
     saveUninitialized: true,
     cookie: {
       httpOnly: true,
-      secure: true,
+      secure: false,
     }
   }));
 };

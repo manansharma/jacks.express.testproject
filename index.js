@@ -31,3 +31,13 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
+
+// enable secure session
+// enable httponly session
+app.use(session({
+  secret: 'My super session secret',
+  cookie: {
+//    httpOnly: true,
+//    secure: true
+  }
+}));

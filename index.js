@@ -6,7 +6,7 @@ var app = express();
 
 
 // ************** for express x-powered-by test ********
-app.disable( 'x-powered-by' );
+app.disable( 'X-Powered-By' );
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 

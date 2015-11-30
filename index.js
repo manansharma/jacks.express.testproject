@@ -15,6 +15,9 @@ require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(
 
 // ************** for enable http only session test ********
 require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
+require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
+require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
+require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 
 
 var server = app.listen(3000, function () {

@@ -8,6 +8,7 @@ var app = express();
 
 // ************** for Express x-powered-by test ********
 //app.disable( 'X-Powered-By' );
+app.use(helmet());
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for Express - enable http only session tests ********

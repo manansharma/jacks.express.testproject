@@ -10,6 +10,6 @@ module.exports = function(app, session) {
     }
   };
 
-  sess1.cookie.secure = true;
+  sess1.cookie.secure = false;
 };
 

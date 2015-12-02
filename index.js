@@ -1,6 +1,7 @@
 var express = require('express');
 var session = require('express-session');
 var csrf = require('csurf');
+var helmet = require('helmet');
 
 var app = express();
 

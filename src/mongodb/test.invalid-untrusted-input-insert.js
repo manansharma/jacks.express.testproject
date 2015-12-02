@@ -1,14 +1,14 @@
   'use strict';
 
 var mongojs = require('mongojs');
-var db = mongojs('contactlist', ['contactlist']);
+var db = mongojs('massassignment', ['massassignment']);
   
 module.exports = function(app) {
 
-    app.post('/contactlist', function (req, res) {
+    app.post('/massassignment', function (req, res) {
     console.log(req.body);
     
-    db.contactlist.insert(req.body, function(err, doc) {
+    db.massassignment.insert(req.body, function(err, doc) {
       res.json(doc);
     });
   });

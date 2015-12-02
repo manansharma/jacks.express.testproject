@@ -7,14 +7,14 @@ var app = express();
 
 
 // ************** for Express x-powered-by test ********
-//app.disable( 'X-Powered-By' );
+app.disable( 'X-Powered-By' );
 app.use(helmet());
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
-require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
-//require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
+//require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
+require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 //
 // ************** for Express - enable secure session tests ********

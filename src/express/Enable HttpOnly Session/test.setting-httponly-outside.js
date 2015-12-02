@@ -9,6 +9,6 @@ module.exports = function(app, session) {
     }
   };
 
-  sess1.cookie.httpOnly = true;
+  sess1.cookie.httpOnly = false;
 };
 

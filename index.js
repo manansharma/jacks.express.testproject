@@ -30,8 +30,10 @@ app.use(helmet());
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-require('./src/mongodb/test.invalid-untrusted-input-insert')(app, session);
-
+//require('./src/mongodb/test.invalid-untrusted-input-insert')(app, session);
+//
+//// ************** for serverside injection tests ********
+require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 
 
 var server = app.listen(3000, function () {

@@ -42,6 +42,10 @@ app.use(helmet());
 //// ************** for node and node modules - path module injection tests ********
 require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
+//
+//// ************** for mongoDB - untrusted find input tests ********
+require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
+
 
 var server = app.listen(3000, function () {
   var host = server.address().address;

@@ -33,7 +33,10 @@ app.use(helmet());
 //require('./src/mongodb/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for serverside injection tests ********
-require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+//require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+//
+//// ************** for node and node modules injection tests ********
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
 
 
 var server = app.listen(3000, function () {

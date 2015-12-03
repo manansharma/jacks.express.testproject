@@ -1,15 +1,17 @@
 'use strict';
 
 module.exports = function(app, session) {
-  var sess1 = {
-    cookie: {
-      httpOnly: true,
-      secure: false,
-      domain: 'codiscope.com',
-      path: '/set-outside'
-    }
-  };
+  app.use(session({
+  secret:"s3Cur3",
+  key: "sessionId",
+  cookie: {
+    domain: '.example.com',
+    path: '/admin'
+  }
+}));
 
-  sess1.cookie.secure = false;
+session.cookie.secure = false;
+
+res.session.cookie.secure = false;
 };
 

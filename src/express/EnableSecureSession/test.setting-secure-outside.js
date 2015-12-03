@@ -5,6 +5,8 @@ module.exports = function(app, session) {
   secret:"s3Cur3",
   key: "sessionId",
   cookie: {
+      httpOnly: true,
+      secure: false,
     domain: '.example.com',
     path: '/admin'
   }

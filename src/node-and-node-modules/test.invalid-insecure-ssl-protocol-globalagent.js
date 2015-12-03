@@ -1,7 +1,7 @@
 var https = require('https');
 var fs = require('fs');
 
-https.globalAgent.options.secureProtocol = 'SSLv3_client_method';
+https.globalAgent.options.secureProtocol = 'SSLv2_method';
 var options = {
   key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
   cert: fs.readFileSync('test/fixtures/keys/agent2-cert.pem')

@@ -21,11 +21,12 @@ var path = require('path');
 //    res.send('Your home directory is located at: ' + getUserHomeDirectory(username));
 //});
 
-var options = [ "jack", "chris", "john" ]
+//var options = [ "jack", "chris", "john" ]
   
 function getUsernameForID(id) {
     var num = parseInt(id);
-    return options[num];
+    
+    return null;
 }
   
 app.get('/home/:id', function(req, res) {

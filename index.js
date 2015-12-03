@@ -20,7 +20,7 @@ app.use(helmet());
 // ************** for Express - enable secure session tests ********
 //require('./src/express/EnableSecureSession/test.missing-secure')(app, session);
 //require('./src/express/EnableSecureSession/test.securesessionfalse')(app, session);
-//require('./src/express/EnableSecureSession/test.setting-secure-outside')(app, session);
+require('./src/express/EnableSecureSession/test.setting-secure-outside')(app, session);
 //require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
 //
 //// ************** for Express - open redirect tests ********
@@ -36,7 +36,7 @@ app.use(helmet());
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
 //
 //// ************** for serverside injection tests ********
-require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+//require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);

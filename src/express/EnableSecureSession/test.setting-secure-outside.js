@@ -6,7 +6,6 @@ module.exports = function(app, session) {
   key: "sessionId",
   cookie: {
       httpOnly: true,
-      secure: true,
     domain: '.example.com',
     path: '/admin'
   }
@@ -14,6 +13,8 @@ module.exports = function(app, session) {
 
 session.cookie.secure = false;
 
-res.session.cookie.secure = false;
+ app.get('/', function(req, res) {
+    req.session.cookie.secure = false;
+  });
 };
 

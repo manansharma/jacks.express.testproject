@@ -32,6 +32,9 @@ app.use(helmet());
 //// ************** for mongodb insert tests ********
 //require('./src/mongodb/test.invalid-untrusted-input-insert')(app, session);
 //
+//// ************** for mongoDB find tests ********
+//require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
+//
 //// ************** for serverside injection tests ********
 //require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
@@ -42,9 +45,7 @@ app.use(helmet());
 //// ************** for node and node modules - path module injection tests ********
 require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
-//
-//// ************** for mongoDB - untrusted find input tests ********
-require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
+
 
 
 var server = app.listen(3000, function () {

@@ -37,7 +37,10 @@ app.use(helmet());
 //
 //// ************** for node and node modules - https module injection tests ********
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions.js')(app, session);
+//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
+//
+//// ************** for node and node modules - path module injection tests ********
+require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 var server = app.listen(3000, function () {

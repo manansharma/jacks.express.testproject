@@ -35,11 +35,8 @@ app.use(helmet());
 //// ************** for serverside injection tests ********
 //require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
-//// ************** for node and node modules injection tests ********
+//// ************** for node and node modules - https module injection tests ********
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-//// ************** for node and node modules injection tests ********
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-//// ************** for node and node modules injection tests ********
 require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions.js')(app, session);
 
 

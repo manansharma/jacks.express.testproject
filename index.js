@@ -36,7 +36,7 @@ app.use(helmet());
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
 //
 //// ************** for serverside injection tests ********
-//require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
@@ -44,7 +44,7 @@ app.use(helmet());
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

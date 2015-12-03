@@ -39,8 +39,8 @@ app.use(helmet());
 //require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
+//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********

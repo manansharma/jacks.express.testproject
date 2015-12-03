@@ -1,10 +1,17 @@
-// Positive Case
-var str_1 = "I am an example input for find.";
-var cursor = db.collection.find({name : str_1}, function (err, docs)
+  'use strict';
 
-//Use of untrusted input.
-var cursor = db.collection.find({name: req.params.name}, function (err, docs)
+var mongojs = require('mongojs');
+var db = mongojs('massassignment', ['massassignment']);
+  
+module.exports = function(app) {
 
-//Use of untrusted input in $where
-var condition = "this.group == "+req.params.group;
-var cursor = db.myCollection.find( { $where: condition}, function (err, docs)
+    app.post('/massassignment', function (req, res) {
+    console.log(req.body);
+    
+    db.massassignment.find(req.body, function(err, doc) {
+      res.json(doc);
+    });
+  });
+    
+    
+};

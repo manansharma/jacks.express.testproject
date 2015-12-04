@@ -47,7 +47,7 @@ app.use(helmet());
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

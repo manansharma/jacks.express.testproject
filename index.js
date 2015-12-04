@@ -11,11 +11,14 @@ app.disable( 'X-Powered-By' );
 app.use(helmet());
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
+// ************** for HTML - insecure script tests ********
+require('./src/HTML/test.invalid-insecure-script.html');
+
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
-require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
+//require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 //
 // ************** for Express - enable secure session tests ********
 //require('./src/express/EnableSecureSession/test.missing-secure')(app, session);
@@ -44,7 +47,7 @@ require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(a
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

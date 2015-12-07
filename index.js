@@ -23,7 +23,7 @@ app.set("views", process.cwd() + "/views");
 //app.set("views", __dirname + "/views");
 
 //require('./src/HTML/test.invalid-insecure-script.html');
-require('./src/HTML/test.invalid-insecure-script')(app);
+//require('./src/HTML/test.invalid-insecure-script')(app);
 
 
 // ************** for Express - enable http only session tests ********
@@ -45,7 +45,7 @@ require('./src/HTML/test.invalid-insecure-script')(app);
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-//require('./src/mongodb/test.invalid-untrusted-input-insert')(app, session);
+require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for mongoDB find tests ********
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);

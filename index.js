@@ -20,9 +20,12 @@ app.use(helmet());
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for HTML - insecure script tests ********
-//require('./src/HTML/test.invalid-insecure-script.html');
 app.set("view engine", "html");
 app.set("views", __dirname + "/views");
+
+//require('./src/HTML/test.invalid-insecure-script.html');
+require('./src/HTML/test.invalid-insecure-script.js');
+
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);

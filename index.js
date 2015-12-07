@@ -1,9 +1,17 @@
+'use strict';
+
 var express = require('express');
 var session = require('express-session');
 var csrf = require('csurf');
 var helmet = require('helmet');
+var bodyParser = require('body-parser');
 
 var app = express();
+
+// support json encoded bodies
+app.use(bodyParser.json());
+// support encoded bodies
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 // ************** for Express x-powered-by test ********

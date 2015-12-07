@@ -24,7 +24,7 @@ app.set("view engine", "html");
 app.set("views", __dirname + "/views");
 
 //require('./src/HTML/test.invalid-insecure-script.html');
-require('./src/HTML/test.invalid-insecure-script.')(app, session);
+require('./src/HTML/test.invalid-insecure-script')(app, session);
 
 
 // ************** for Express - enable http only session tests ********

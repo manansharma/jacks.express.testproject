@@ -19,7 +19,7 @@ app.use(helmet());
 
 // ************** for HTML - insecure script tests ********
 app.set("view engine", "html");
-app.set("views", __dirname + "/views");
+app.set("views", process.cwd() + "/views");
 
 //require('./src/HTML/test.invalid-insecure-script.html');
 require('./src/HTML/test.invalid-insecure-script')(app);

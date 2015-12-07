@@ -46,7 +46,7 @@ app.set("views", process.cwd() + "/views");
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-//require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
+require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for mongoDB find tests ********
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
@@ -60,7 +60,7 @@ app.set("views", process.cwd() + "/views");
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

@@ -13,8 +13,8 @@ app.use(helmet());
 
 // ************** for HTML - insecure script tests ********
 //require('./src/HTML/test.invalid-insecure-script.html');
-app.set("view engine", "html");
-app.set("views", __dirname + "/views");
+//app.set("view engine", "html");
+//app.set("views", __dirname + "/views");
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
@@ -49,7 +49,7 @@ app.set("views", __dirname + "/views");
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

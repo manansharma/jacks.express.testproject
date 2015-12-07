@@ -40,7 +40,7 @@ app.set("views", process.cwd() + "/views");
 //require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
 //
 //// ************** for Express - open redirect tests ********
-//require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
+require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
 //
 //// ************** for random number tests ********
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);

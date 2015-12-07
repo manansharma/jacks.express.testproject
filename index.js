@@ -13,6 +13,8 @@ app.use(helmet());
 
 // ************** for HTML - insecure script tests ********
 //require('./src/HTML/test.invalid-insecure-script.html');
+app.set("view engine", "html");
+app.set("views", __dirname + "/views");
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
@@ -47,7 +49,7 @@ app.use(helmet());
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 
@@ -58,13 +60,4 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
-        
-// enable secure session
-// enable httponly session
-//app.use(session({
-//  secret: 'My super session secret',
-//  cookie: {
-////    httpOnly: true,
-////    secure: true
-//  }
-//}));
+    

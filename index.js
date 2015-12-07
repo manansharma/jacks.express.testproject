@@ -29,7 +29,7 @@ app.set("views", process.cwd() + "/views");
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
-//require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
+require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 //
@@ -40,7 +40,7 @@ app.set("views", process.cwd() + "/views");
 //require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
 //
 //// ************** for Express - open redirect tests ********
-require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
+//require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
 //
 //// ************** for random number tests ********
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);

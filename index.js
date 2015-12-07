@@ -1,5 +1,3 @@
-'use strict';
-
 var express = require('express');
 var session = require('express-session');
 var csrf = require('csurf');
@@ -24,7 +22,7 @@ app.set("view engine", "html");
 app.set("views", __dirname + "/views");
 
 //require('./src/HTML/test.invalid-insecure-script.html');
-require('./src/HTML/test.invalid-insecure-script')(app, session);
+//require('./src/HTML/test.invalid-insecure-script')(app, session);
 
 
 // ************** for Express - enable http only session tests ********
@@ -60,7 +58,7 @@ require('./src/HTML/test.invalid-insecure-script')(app, session);
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 
 
 

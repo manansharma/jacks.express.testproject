@@ -14,14 +14,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // ************** for Express x-powered-by test ********
 //app.disable( 'X-Powered-By' );
-app.use(helmet());
-app.use(helmet.noCache());
+//app.use(helmet());
+//app.use(helmet.noCache());
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for HTML - insecure script tests ********
 app.set("view engine", "html");
 app.set("views", process.cwd() + "/views");
-//app.set("views", __dirname + "/views");
+app.set("views", __dirname + "/views");
 
 require('./src/HTML/test.invalid-insecure-script.html');
 //require('./src/HTML/test.invalid-insecure-script')(app);

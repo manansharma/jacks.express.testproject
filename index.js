@@ -53,7 +53,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
 //
 //// ************** for serverside injection tests ********
-//require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
 //require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
@@ -65,7 +65,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
-require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
+//require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 
 var server = app.listen(3000, function () {

@@ -23,8 +23,8 @@ app.set("view engine", "html");
 app.set("views", process.cwd() + "/views");
 app.set("views", __dirname + "/views");
 
-require('./src/HTML/test.invalid-insecure-script.html');
-//require('./src/HTML/test.invalid-insecure-script')(app);
+//require('./src/HTML/test.invalid-insecure-script.html');
+require('./src/HTML/test.invalid-insecure-script')(app);
 
 
 // ************** for Express - enable http only session tests ********

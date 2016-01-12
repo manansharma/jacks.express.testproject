@@ -46,10 +46,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
+//require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for mongoDB find tests ********
-//require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
+require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
 //
 //// ************** for serverside injection tests ********
 //require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);

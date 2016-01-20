@@ -44,10 +44,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
 //
 //// ************** for random number tests ********
-//require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
+require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
+//require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for mongoDB find tests ********
 //require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);

@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/EnableSecureSession/test.missing-secure')(app, session);
 //require('./src/express/EnableSecureSession/test.securesessionfalse')(app, session);
 //require('./src/express/EnableSecureSession/test.setting-secure-outside')(app, session);
-require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
+//require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
 //
 //// ************** for Express - open redirect tests ********
 //require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
@@ -65,7 +65,7 @@ require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(ap
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
-//require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
+require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 
 var server = app.listen(3000, function () {

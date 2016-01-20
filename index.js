@@ -29,8 +29,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // ************** for Express - enable http only session tests ********
 //require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
-require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
-//require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
+//require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
+require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 //

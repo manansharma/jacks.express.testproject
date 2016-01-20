@@ -41,31 +41,31 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(app, session);
 //
 //// ************** for Express - open redirect tests ********
-//require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
+require('./src/express/open-redirect/test.valid-open-redirect')(app, session);
 //
 //// ************** for random number tests ********
-//require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
+require('./src/javascript core/clientside prng/test.negative-randomnumber-use')(app, session);
 //
 //// ************** for mongodb insert tests ********
-//require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
+require('./src/mongodb/insert/test.invalid-untrusted-input-insert')(app, session);
 //
 //// ************** for mongoDB find tests ********
 require('./src/mongodb/find/test.find-with-untrusted-input')(app, session);
 //
 //// ************** for serverside injection tests ********
-//require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
+require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
 require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
-require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
+//require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 
 var server = app.listen(3000, function () {

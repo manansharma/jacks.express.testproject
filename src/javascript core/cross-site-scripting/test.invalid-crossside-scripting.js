@@ -10,6 +10,9 @@ function getUserHomeDirectory(username) {
     console.log("Resolving " + username + " to home directory");
     return path.resolve(__dirname, 'home', username);
 }
+app.get('/', function(req, res) {
+  res.send('Your home directory is located at: ' + getUserHomeDirectory("rahul"))
+});
 
 app.get('/path/:username', function(req, res) {
     var username = req.params.username;

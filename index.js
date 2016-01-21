@@ -28,7 +28,7 @@ app.set("views", __dirname + "/src/views");
 
 
 // ************** for Express - enable http only session tests ********
-require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
+//require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
@@ -65,7 +65,7 @@ require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, sess
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
-//require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
+require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 
 var server = app.listen(3000, function () {

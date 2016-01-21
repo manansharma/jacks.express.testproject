@@ -3,14 +3,18 @@ var session = require('express-session');
 var csrf = require('csurf');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
-var htmlEscape = require("secure-filters");
+var secureFilters = require('secure-filters');
+
 
 var app = express();
 
+
 // support json encoded bodies
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({extended: true}));
+
+
 
 
 // ************** for Express x-powered-by test ********
@@ -20,7 +24,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for HTML - insecure script tests ********
-app.set("view engine", "html");
+//app.set("view engine", "html");
+
+app.set("view engine", "ejs");
+var ejs = require('ejs');
+ejs.filters.secJS = secureFilters.js;
+
 //app.set("views", process.cwd() + "/views");
 app.set("views", __dirname + "/src/views");
 

@@ -6,12 +6,23 @@ var path = require('path');
 
 module.exports = function(app, Session) {
 
-  app.get('/rahul upadyaya', function(req, res) {
+  /*app.get('/', function(req, res) {
     //var escaped = htmlEscape('"><script>alert(\'pwn\')</script>');
     var username = req.params.username;
-    var escaped = username;
-    response.send("Hi" + escaped);
+    var not_escaped = username;
+    var escaped = htmlEscape(username);
+    console.log(escaped);
+    console.log(not_escaped);
+    //response.send("Not Escaped:" + not_escaped + ", Escaped:" + escaped);
+  });*/
+
+
+  
+
+  app.get('/', function(req, res) {
+    response.render("index");
   });
+
 /*function getUserHomeDirectory(username) {
     console.log("Resolving " + username + " to home directory");
     return path.resolve(__dirname, 'home', username);

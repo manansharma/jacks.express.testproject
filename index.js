@@ -28,7 +28,7 @@ app.set("views", __dirname + "/src/views");
 
 
 // ************** for Express - enable http only session tests ********
-//require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
+require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);

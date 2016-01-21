@@ -6,9 +6,11 @@ var path = require('path');
 
 module.exports = function(app, Session) {
 
-  app.get('/', function(req, res) {
+  app.get('/rahul upadyaya', function(req, res) {
     //var escaped = htmlEscape('"><script>alert(\'pwn\')</script>');
-    var escaped = "<script>alert(\'pwn\')</script>')";
+    var username = req.params.username;
+    var escaped = username;
+    response.send("Hi" + escaped);
   });
 /*function getUserHomeDirectory(username) {
     console.log("Resolving " + username + " to home directory");

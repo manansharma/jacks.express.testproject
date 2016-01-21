@@ -3,9 +3,7 @@ var session = require('express-session');
 var csrf = require('csurf');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
-var secureFilters = require('secure-filters');
 var ejs = require('ejs');
-
 
 var app = express();
 
@@ -73,6 +71,7 @@ app.engine('html', ejs.renderFile);
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
+var ejs = require('secure-filters').configure(require('ejs'));
 require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 

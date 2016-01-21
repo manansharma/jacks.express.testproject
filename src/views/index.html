@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>User <%- user.id %></title>
 </head>
-<body style="background: <%- user.color %>">
+<body style="background: <%- user.color | style %>">
   <h1>Details for user <%- user.id %></h1>
   <ul>
     <li>Name: <%- user.name %></li>
@@ -12,7 +12,7 @@
     <li>Description: <%- user.description %></li>
   </ul>
   <script type="text/javascript">
-    var userConfig = "<%- JSON.stringify(user.config) %>";
+    var userConfig = "<%- JSON.stringify(user.config) | js %>";
   </script>
 </body>
 </html>

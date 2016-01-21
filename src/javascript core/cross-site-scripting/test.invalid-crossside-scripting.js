@@ -13,7 +13,7 @@ module.exports = function(app, Session) {
       description: '<script>alert("hacked!")</script>',
       color: '#CCC;" onload="javascript:alert(\'yet another hack!\')',
       config: {
-      motto: "</script><script>alert('hacked again!!'); </script>"
+        motto: "</script><script>alert('hacked again!!'); </script>"
       },
       id: 1
     }

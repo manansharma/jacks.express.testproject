@@ -6,22 +6,27 @@ var path = require('path');
 
 module.exports = function(app, Session) {
 
-  /*app.get('/', function(req, res) {
-    //var escaped = htmlEscape('"><script>alert(\'pwn\')</script>');
-    var username = req.params.username;
-    var not_escaped = username;
-    var escaped = htmlEscape(username);
-    console.log(escaped);
-    console.log(not_escaped);
-    //response.send("Not Escaped:" + not_escaped + ", Escaped:" + escaped);
-  });*/
+  var users = {
+    1: {
+      name: 'John Doe',
+      alias: 'john',
+      description: '<script>alert("hacked!")</script>',
+      color: '#CCC;" onload="javascript:alert(\'yet another hack!\')',
+      config: {
+      motto: "</script><script>alert('hacked again!!'); </script>"
+      },
+      id: 1
+    }
+  };
 
-
-  
-
-  app.get('/', function(req, res) {
-    response.render("index");
+  app.use('/users/:id', function(req, res, next) {
+    res.render('index', {
+      user: users[req.params.id]
+    });
   });
+  /*app.get('/', function(req, res) {
+    response.render("index");
+  });*/
 
 /*function getUserHomeDirectory(username) {
     console.log("Resolving " + username + " to home directory");

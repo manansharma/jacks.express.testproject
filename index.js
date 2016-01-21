@@ -4,13 +4,14 @@ var csrf = require('csurf');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
 var secureFilters = require('secure-filters');
+var ejs = require('ejs');
 
 
 var app = express();
 
 
 // support json encoded bodies
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -24,14 +25,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for HTML - insecure script tests ********
-//app.set("view engine", "html");
-
-app.set("view engine", "ejs");
-var ejs = require('ejs');
-ejs.filters.secJS = secureFilters.js;
-
+app.set("view engine", "html");
 //app.set("views", process.cwd() + "/views");
 app.set("views", __dirname + "/src/views");
+
+app.engine('html', ejs.renderFile);
 
 //require('./src/HTML/test.invalid-insecure-script.html');
 //require('./src/HTML/test.invalid-insecure-script')(app);

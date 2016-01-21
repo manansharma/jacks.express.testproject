@@ -5,7 +5,7 @@ var path = require('path');
 // Path Injection - http://localhost:3000/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc
 
 module.exports = function(app, Session) {
-
+//var ejs = require('secure-filters').configure(require('ejs'));
   var users = {
     1: {
       name: 'John Doe',

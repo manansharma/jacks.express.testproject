@@ -23,11 +23,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 //require('./src/express/express-xpoweredby/express-xpoweredby')(app, session);
 
 // ************** for HTML - insecure script tests ********
-app.set("view engine", "html");
+//app.set("view engine", "html");
 //app.set("views", process.cwd() + "/views");
-app.set("views", __dirname + "/src/views");
-
-app.engine('html', ejs.renderFile);
+//app.set("views", __dirname + "/src/views");
 
 //require('./src/HTML/test.invalid-insecure-script.html');
 //require('./src/HTML/test.invalid-insecure-script')(app);
@@ -71,8 +69,8 @@ app.engine('html', ejs.renderFile);
 //require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
-var ejs = require('secure-filters').configure(require('ejs'));
-require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
+//app.engine('html', ejs.renderFile);
+//require('./src/javascript core/cross-site-scripting/test.invalid-crossside-scripting')(app, session);
 
 
 var server = app.listen(3000, function () {

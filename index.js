@@ -3,6 +3,7 @@ var session = require('express-session');
 var csrf = require('csurf');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
+var htmlEscape = require("secure-filters");
 
 var app = express();
 

@@ -35,7 +35,7 @@ app.set("views", __dirname + "/src/views");
 //require('./src/express/Enable HttpOnly Session/EnableHttpOnlySession')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.valid-enableHttpOnlySession')(app, session);
 require('./src/express/Enable HttpOnly Session/test.httponlyfalse')(app, session);
-//require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
+require('./src/express/Enable HttpOnly Session/test.missing-httponly')(app, session);
 //require('./src/express/Enable HttpOnly Session/test.setting-httponly-outside')(app, session);
 //
 // ************** for Express - enable secure session tests ********

@@ -60,13 +60,13 @@ require('./src/express/EnableSecureSession/test.valid-enable-secure-session')(ap
 //require('./src/javascript core/server-side-injection/test.invalid-serverside-injection')(app, session);
 //
 //// ************** for node and node modules - https module injection tests ********
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
-//require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-globalagent')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-httpsoption')(app, session);
+require('./src/node-and-node-modules/https-module/test.invalid-insecure-ssl-protocol-requestagentoptions')(app, session);
 //
 //// ************** for node and node modules - path module injection tests ********
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
-require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal')(app, session);
+//require('./src/node-and-node-modules/path-module/test.invalid-untrusted-input-path-traversal_1')(app, session);
 //
 //// ************** for JavaScript Core - cross site scripting ********
 //app.engine('html', ejs.renderFile);
